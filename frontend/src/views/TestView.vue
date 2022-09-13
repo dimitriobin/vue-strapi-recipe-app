@@ -6,7 +6,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class HomeView extends Vue {
+export default class TestView extends Vue {
   message = 'This is a test';
 }
 </script>
