@@ -1,17 +1,14 @@
 <template>
-        <HelloWorld />
+    <v-container>
+        <h1 class="is-size-1 has-text-black">{{message}}</h1>
+        </v-container>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '../components/HelloWorld.vue';
 
-  @Component({
-    components: {
-      HelloWorld,
-    },
-  })
+  @Component
 export default class HomeView extends Vue {
-    message = 'This is a test';
+    message = 'This is homepage';
 }
 </script>

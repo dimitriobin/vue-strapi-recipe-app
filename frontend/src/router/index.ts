@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
+import AccountView from '@/views/AccountView.vue';
 import HomeView from '../views/HomeView.vue';
-import TestView from '../views/TestView.vue';
+import RecipesView from '../views/RecipesView.vue';
 
 Vue.use(VueRouter);
 
@@ -20,9 +21,14 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
   },
   {
-    path: '/test',
-    name: 'test',
-    component: TestView,
+    path: '/recipes',
+    name: 'recipes',
+    component: RecipesView,
+  },
+  {
+    path: '/account',
+    name: 'account',
+    component: AccountView,
   },
 ];
 
