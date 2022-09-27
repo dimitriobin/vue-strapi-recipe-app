@@ -1,11 +1,17 @@
 import Vue from "vue";
-import Vuex from "vuex";
-import recipes from "./modules/recipes";
+import Vuex, { StoreOptions } from "vuex";
+import recipe from "./modules/recipe";
+import { RootState } from "./types";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-    modules: {
-        recipes,
+const store: StoreOptions<RootState> = {
+    state: {
+        version: "1.0.0",
     },
-});
+    modules: {
+        recipe,
+    },
+};
+
+export default new Vuex.Store<RootState>(store);
